@@ -1,0 +1,31 @@
+package com.airtribe.learntrack.entity;
+
+public abstract class Person {
+    protected int id;
+    protected String firstName;
+    protected String lastName;
+    protected String email;
+
+    //constructor
+    public Person(int id, String firstName,String lastName, String email){
+        this.id=id;
+        this.firstName=firstName;
+        this.lastName=lastName;
+        this.email=email;
+    }
+
+    public abstract String getRole();
+
+    // Getters
+    public int getId() {
+        return id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getDisplayName() {
+        return firstName +" "+ lastName;
+    }
+}
